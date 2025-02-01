@@ -1,100 +1,100 @@
 {
-	"notas": [
-		"Solo es necesario pegar el nombre de cada ficha, pero este debe ser exacto.",
-		"Cuidado con la sintaxis: las comas son necesarias después de cada línea EXCEPTO la última de cada sección.",
-		"Ejemplo: 'nombre' y 'capitulo' necesitan coma, pero 'url' no. La última ficha no necesita coma después del }"
-	],
-	"dominio": "https://olympuslectura.com",
-	"fichas": [
-		{
-			"nombre": "Mis subordinados son demasiado fuertes",
-			"capitulo": "Capítulo 82",
-			"url": "https://olympuslectura.com/series/comic-mis-subordinados-son-demasiado-fuertes"
-		},
-		{
-			"nombre": "El Profesor Encubierto de la Academia",
-			"capitulo": "Capítulo 103",
-			"url": "https://olympuslectura.com/series/comic-el-profesor-encubierto-de-la-academiad-8468-68429125"
-		},
-		{
-			"nombre": "El Novato es Muy Fuerte",
-			"capitulo": "",
-			"url": ""
-		},
-		{
-			"nombre": "El jugador que no puede subir de nivel",
-			"capitulo": "Capítulo 173",
-			"url": "https://olympuslectura.com/series/comic-subiendodenivelqque-nunca-acaba13424"
-		},
-		{
-			"nombre": "No soy un regresor",
-			"capitulo": "",
-			"url": ""
-		},
-		{
-			"nombre": "Caballero en Eterna Regresión",
-			"capitulo": "Capítulo 43",
-			"url": "https://olympuslectura.com/series/comic-83880313843"
-		},
-		{
-			"nombre": "Acampando en otro Mundo: buscandole el sazon a la vida",
-			"capitulo": "Capítulo 49",
-			"url": "https://olympuslectura.com/series/comic-83880-3456456"
-		},
-		{
-			"nombre": "Academia de la Ascensión",
-			"capitulo": "Capítulo 141",
-			"url": "https://olympuslectura.com/series/comic-tutores-poderosos"
-		},
-		{
-			"nombre": "Loco Frontera",
-			"capitulo": "Capítulo 178",
-			"url": "https://olympuslectura.com/series/comic-loco2983880"
-		},
-		{
-			"nombre": "La vida de un mago de la academia de magia",
-			"capitulo": "",
-			"url": ""
-		},
-		{
-			"nombre": "Me convertí en el tirano de un juego de defensa (Tower Crush)",
-			"capitulo": "",
-			"url": ""
-		},
-		{
-			"nombre": "Guía de supervivencia del extra de la academia",
-			"capitulo": "Capítulo 62",
-			"url": "https://olympuslectura.com/series/comic-guia-de-superviviencia-29-1-25"
-		},
-		{
-			"nombre": "Que alguien detenga al Papa",
-			"capitulo": "Capítulo 27",
-			"url": "https://olympuslectura.com/series/comic-que-alguien-detenga-al-papa"
-		},
-		{
-			"nombre": "Como vivir como un villano",
-			"capitulo": "Capítulo 176",
-			"url": "https://olympuslectura.com/series/comic-28-6546-26541"
-		},
-		{
-			"nombre": "Cambiando la masmorra",
-			"capitulo": "Capítulo 234",
-			"url": "https://olympuslectura.com/series/comic-cambiando-la-masmorra13424"
-		},
-		{
-			"nombre": "El hombre más guapo se convirtió en esqueleto",
-			"capitulo": "Capítulo 8",
-			"url": "https://olympuslectura.com/series/comic-el-hombre-mas-guapo-se-convirtio-en-esqueleto"
-		},
-		{
-			"nombre": "El creador de Artefactos",
-			"capitulo": "Capítulo 44",
-			"url": "https://olympuslectura.com/series/comic-tony-stark-coreano"
-		},
-		{
-			"nombre": "Civilización Nebula",
-			"capitulo": "Capítulo 74",
-			"url": "https://olympuslectura.com/series/comic-5454-01-3646"
-		}
-	]
+  "notas": [
+    "Solo es necesario pegar el nombre de cada ficha, pero este debe ser exacto.",
+    "Cuidado con la sintaxis: las comas son necesarias después de cada línea EXCEPTO la última de cada sección.",
+    "Ejemplo: 'nombre' y 'capitulo' necesitan coma, pero 'url' no. La última ficha no necesita coma después del }"
+  ],
+  "dominio": "https://olympuslectura.com",
+  "fichas": [
+    {
+      "nombre": "Mis subordinados son demasiado fuertes",
+      "capitulo": "Capítulo 82",
+      "url": "https://olympuslectura.com/series/comic-mis-subordinados-son-demasiado-fuertes"
+    },
+    {
+      "nombre": "El Profesor Encubierto de la Academia",
+      "capitulo": "Capítulo 103",
+      "url": "https://olympuslectura.com/series/comic-83884-encubierto-de-la-academiad-8468-68431125"
+    },
+    {
+      "nombre": "El Novato es Muy Fuerte",
+      "capitulo": "",
+      "url": ""
+    },
+    {
+      "nombre": "El jugador que no puede subir de nivel",
+      "capitulo": "Capítulo 173",
+      "url": "https://olympuslectura.com/series/comic-subiendodenivelqque-nunca-acaba13424"
+    },
+    {
+      "nombre": "No soy un regresor",
+      "capitulo": "",
+      "url": ""
+    },
+    {
+      "nombre": "Caballero en Eterna Regresión",
+      "capitulo": "Capítulo 43",
+      "url": "https://olympuslectura.com/series/comic-83880313843"
+    },
+    {
+      "nombre": "Acampando en otro Mundo: buscandole el sazon a la vida",
+      "capitulo": "Capítulo 49",
+      "url": "https://olympuslectura.com/series/comic-83880-3456456"
+    },
+    {
+      "nombre": "Academia de la Ascensión",
+      "capitulo": "Capítulo 141",
+      "url": "https://olympuslectura.com/series/comic-tutores-poderosos"
+    },
+    {
+      "nombre": "Loco Frontera",
+      "capitulo": "Capítulo 178",
+      "url": "https://olympuslectura.com/series/comic-loco2983885"
+    },
+    {
+      "nombre": "La vida de un mago de la academia de magia",
+      "capitulo": "",
+      "url": ""
+    },
+    {
+      "nombre": "Me convertí en el tirano de un juego de defensa (Tower Crush)",
+      "capitulo": "",
+      "url": ""
+    },
+    {
+      "nombre": "Guía de supervivencia del extra de la academia",
+      "capitulo": "Capítulo 62",
+      "url": "https://olympuslectura.com/series/comic-83880-superviviencia-31-1-25"
+    },
+    {
+      "nombre": "Que alguien detenga al Papa",
+      "capitulo": "Capítulo 27",
+      "url": "https://olympuslectura.com/series/comic-que-alguien-detenga-al-papa"
+    },
+    {
+      "nombre": "Como vivir como un villano",
+      "capitulo": "Capítulo 176",
+      "url": "https://olympuslectura.com/series/comic-28-65483880"
+    },
+    {
+      "nombre": "Cambiando la masmorra",
+      "capitulo": "Capítulo 234",
+      "url": "https://olympuslectura.com/series/comic-cambiando-la-masmorra13424"
+    },
+    {
+      "nombre": "El hombre más guapo se convirtió en esqueleto",
+      "capitulo": "Capítulo 8",
+      "url": "https://olympuslectura.com/series/comic-el-hombre-mas-guapo-se-convirtio-en-esqueleto"
+    },
+    {
+      "nombre": "El creador de Artefactos",
+      "capitulo": "Capítulo 44",
+      "url": "https://olympuslectura.com/series/comic-tony-stark-coreano"
+    },
+    {
+      "nombre": "Civilización Nebula",
+      "capitulo": "Capítulo 74",
+      "url": "https://olympuslectura.com/series/comic-83880-3646"
+    }
+  ]
 }
