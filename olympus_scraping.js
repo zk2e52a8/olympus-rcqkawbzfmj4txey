@@ -124,9 +124,19 @@ async function main() {
 			for (const fichaWeb of fichas) {
 				if (fichasMap.has(fichaWeb.nombre)) {
 					const fichaExistente = fichasMap.get(fichaWeb.nombre);
-					console.log(`Actualizando ficha: ${fichaWeb.nombre}`);
-					fichaExistente.capitulo = fichaWeb.capitulo;
-					fichaExistente.url = fichaWeb.url;
+
+					// Extraer el número de capítulo ("0" si no se encuentra o no se puede leer)
+					const numCapExistente = parseInt(fichaExistente.capitulo.match(/\d+/)?.[0] || '0');
+					const numCapWeb = parseInt(fichaWeb.capitulo.match(/\d+/)?.[0] || '0');
+
+					// Actualizar solo si el capítulo web es igual o mayor al existente
+					if (numCapWeb >= numCapExistente) {
+						console.log(`Actualizando ficha: ${fichaWeb.nombre}`);
+						fichaExistente.capitulo = fichaWeb.capitulo;
+						fichaExistente.url = fichaWeb.url;
+					} else {
+						console.log(`Omitiendo actualización de ${fichaWeb.nombre}: capítulo web (${numCapWeb}) es menor que el existente (${numCapExistente})`);
+					}
 				}
 			}
 
