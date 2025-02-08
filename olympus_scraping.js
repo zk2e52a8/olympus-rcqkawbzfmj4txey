@@ -106,9 +106,9 @@ async function main() {
 					// Extraer los datos relevantes de cada ficha
 					fichasEncontradas.push({
 						nombre: ficha.querySelector('figcaption').innerText.trim(),
-										   url: dominio + ficha.querySelector('a[title]').getAttribute('href'),
-										   capitulo: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child #name').innerText.trim(),
-										   fecha: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child time').getAttribute('datetime')
+						url: dominio + ficha.querySelector('a[title]').getAttribute('href'),
+						capitulo: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child #name').innerText.trim(),
+						fecha: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child time').getAttribute('datetime')
 					});
 				});
 				return fichasEncontradas;
