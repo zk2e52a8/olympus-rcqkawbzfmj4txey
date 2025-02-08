@@ -2,6 +2,8 @@ const puppeteer = require('/tmp/npm/node_modules/puppeteer-extra');
 const StealthPlugin = require('/tmp/npm/node_modules/puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 
+const MINIMO_PAGINAS = 2;
+
 // TODO Añadir una verificación para el cambio de dominio, que permita actualizarlo en el JSON
 
 puppeteer.use(StealthPlugin());
@@ -88,9 +90,8 @@ async function main() {
 		});
 
 		let numeroPagina = 1;
-		let continuarBuscando = true;
 
-		while (continuarBuscando) {
+		while (true) {
 			console.log(`\nRevisando página ${numeroPagina}...`);
 
 			// Construir URL de la página actual
@@ -105,9 +106,9 @@ async function main() {
 					// Extraer los datos relevantes de cada ficha
 					fichasEncontradas.push({
 						nombre: ficha.querySelector('figcaption').innerText.trim(),
-						url: dominio + ficha.querySelector('a[title]').getAttribute('href'),
-						capitulo: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child #name').innerText.trim(),
-						fecha: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child time').getAttribute('datetime')
+										   url: dominio + ficha.querySelector('a[title]').getAttribute('href'),
+										   capitulo: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child #name').innerText.trim(),
+										   fecha: ficha.querySelector('.flex.flex-col.gap-2.mt-4 a:first-child time').getAttribute('datetime')
 					});
 				});
 				return fichasEncontradas;
@@ -119,23 +120,8 @@ async function main() {
 				break;
 			}
 
-			// Revisar cada ficha obtenida en la página
+			// Actualizar todas las fichas de la página actual
 			for (const fichaWeb of fichas) {
-				// Validar el formato de la fecha antes de procesarla
-				if (!esFormatoFechaValido(fichaWeb.fecha)) {
-					console.error('Se encontró una fecha con formato inválido. Deteniendo el proceso...');
-					continuarBuscando = false;
-					break;
-				}
-
-				// Si se encuentra una fecha más antigua que el timestamp guardado, terminar el scraping
-				if (fichaWeb.fecha <= timestampGuardado) {
-					console.log('Encontrada ficha con fecha anterior al último scraping, terminando...');
-					continuarBuscando = false;
-					break;
-				}
-
-				// Si la ficha scrapeada es conocida, actualizarla
 				if (fichasMap.has(fichaWeb.nombre)) {
 					const fichaExistente = fichasMap.get(fichaWeb.nombre);
 					console.log(`Actualizando ficha: ${fichaWeb.nombre}`);
@@ -144,7 +130,13 @@ async function main() {
 				}
 			}
 
-			if (!continuarBuscando) break;
+			// Verificar si debemos continuar con la siguiente página
+			const ultimaFicha = fichas[fichas.length - 1];
+			if ((!esFormatoFechaValido(ultimaFicha.fecha) || ultimaFicha.fecha <= timestampGuardado)
+				&& numeroPagina >= MINIMO_PAGINAS) {
+				console.log('Alcanzado el límite de tiempo o fecha inválida, y mínimo de páginas revisadas, terminando...');
+			break;
+				}
 
 			numeroPagina++;
 			await new Promise(resolve => setTimeout(resolve, 5000)); // Espera entre descargas, en milisegundos
@@ -182,7 +174,7 @@ main().catch(error => {
 //
 // on:
 //   schedule:
-//     - cron: '0 */12 * * *'
+//     - cron: '0 */4 * * *'
 //   workflow_dispatch:
 //
 // jobs:
