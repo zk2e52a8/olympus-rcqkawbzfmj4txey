@@ -4,7 +4,7 @@
     "Cuidado con la sintaxis: las comas son necesarias después de cada línea EXCEPTO la última de cada sección.",
     "Ejemplo: 'nombre' y 'capitulo' necesitan coma, pero 'url' no. La última ficha no necesita coma después del }"
   ],
-  "dominio": "https://olympuslectura.com",
+  "dominio": "https://olympusbiblioteca.com",
   "fichas": [
     {
       "nombre": "Mis subordinados son demasiado fuertes",
